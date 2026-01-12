@@ -6,6 +6,13 @@
  */
 
 // VARIABLES
-const _score: number = 0;
-const _userAnswerquestionNumber: number = 0;
-const _userAnswer: string = "";
+let score: number = 0;
+let questionNumber: number = 0;
+let userAnswer: string = "";
+
+// Temporary usage to satisfy linter
+score++;
+questionNumber++;
+userAnswer = "A";
+
+console.log(score, questionNumber, userAnswer);
