@@ -6,7 +6,6 @@
  */
 
 // VARIABLES
-let score: number = 0;
-let questionNumber: number = 0;
-let userAnswer: string = "";
-
+const _score: number = 0;
+const _userAnswerquestionNumber: number = 0;
+const _userAnswer: string = "";
