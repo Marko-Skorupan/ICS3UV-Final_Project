@@ -56,7 +56,7 @@ const answers: string[][] = [
 
 // MAIN PROGRAM
 while (questionNumber < questions.length) {
-  userAnswer = prompt(questions[questionNumber]) ?? "";
+  userAnswer = "";
   userAnswer = userAnswer.toLowerCase().trim();
 
   if (answers[questionNumber].includes(userAnswer)) {
