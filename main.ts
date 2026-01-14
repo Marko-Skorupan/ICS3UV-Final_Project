@@ -49,9 +49,28 @@ const answers: string[][] = [
   ["russia"],
   ["90 minutes", "90"],
   ["real madrid"],
-  ["throw-in", "throw in"]
+  ["throw-in", "throw in"],
 ];
 
 // TEMP USAGE
 console.log(score, questionNumber, userAnswer);
 console.log(questions[0], answers[0]);
+
+while (questionNumber < questions.length) {
+  userAnswer = prompt(questions[questionNumber]) ?? "";
+  userAnswer = userAnswer.toLowerCase().trim();
+
+  // Check if user answer matches any of the accepted answers
+  if (answers[questionNumber].includes(userAnswer)) {
+    console.log("Correct!\n");
+    score = score + 1;
+  } else {
+    console.log(
+      "Incorrect. The correct answer is " +
+        answers[questionNumber][0] +
+        "\n",
+    );
+  }
+
+  questionNumber = questionNumber + 1;
+}
