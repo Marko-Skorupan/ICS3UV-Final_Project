@@ -5,8 +5,6 @@
  * @fileoverview Console-based soccer quiz game.
  */
 
-declare function prompt(message?: string): string | null;
-
 // VARIABLES
 let score: number = 0;
 let questionNumber: number = 0;
@@ -28,7 +26,7 @@ const questions: string[] = [
   "Which country hosted the 2018 FIFA World Cup?",
   "How long is a standard professional soccer match?",
   "Which club is FC Barcelona’s biggest rival?",
-  "What restarts play when the ball goes out over the sideline?",
+  "What restarts play when the ball goes out over the sideline?"
 ];
 
 const answers: string[][] = [
@@ -46,10 +44,10 @@ const answers: string[][] = [
   ["russia"],
   ["90 minutes", "90"],
   ["real madrid"],
-  ["throw-in", "throw in"],
+  ["throw-in", "throw in"]
 ];
 
-// MAIN QUIZ LOOP
+// MAIN PROGRAM
 while (questionNumber < questions.length) {
   userAnswer = prompt(questions[questionNumber]) ?? "";
   userAnswer = userAnswer.toLowerCase().trim();
