@@ -1,3 +1,5 @@
+declare function prompt(message?: string): string | null;
+
 /* eslint-disable no-undef */
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
