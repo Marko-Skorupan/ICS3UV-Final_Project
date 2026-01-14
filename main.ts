@@ -31,7 +31,7 @@ const questions: string[] = [
   "Which country hosted the 2018 FIFA World Cup?",
   "How long is a standard professional soccer match?",
   "Which club is FC Barcelona’s biggest rival?",
-  "What restarts play when the ball goes out over the sideline?"
+  "What restarts play when the ball goes out over the sideline?",
 ];
 
 const answers: string[][] = [
@@ -49,7 +49,7 @@ const answers: string[][] = [
   ["russia"],
   ["90 minutes", "90"],
   ["real madrid"],
-  ["throw-in", "throw in"]
+  ["throw-in", "throw in"],
 ];
 
 // MAIN PROGRAM
@@ -63,8 +63,8 @@ while (questionNumber < questions.length) {
   } else {
     console.log(
       "Incorrect. The correct answer is " +
-      answers[questionNumber][0] +
-      "\n"
+        answers[questionNumber][0] +
+        "\n",
     );
   }
 
@@ -73,3 +73,5 @@ while (questionNumber < questions.length) {
 
 console.log("Quiz complete!");
 console.log("Your final score is: " + score + " / " + questions.length);
+
+console.log("\nDone.");
