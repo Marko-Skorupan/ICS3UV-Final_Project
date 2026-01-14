@@ -32,7 +32,7 @@ const questions: string[] = [
   "What is awarded when a defender commits a foul inside their own penalty area?",
   "Which country hosted the 2018 FIFA World Cup?",
   "How long is a standard professional soccer match?",
-  "Which club is FC Barcelona’s biggest rival?",
+  "Which club is FC Barcelona's biggest rival?",
   "What restarts play when the ball goes out over the sideline?",
 ];
 
