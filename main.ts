@@ -1,3 +1,8 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-alert */
+/* eslint-disable no-console */
+/* eslint-disable no-restricted-globals */
+
 /**
  * @author Marko Skorupan
  * @version 1.0.0
