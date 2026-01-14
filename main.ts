@@ -5,15 +5,12 @@
  * @fileoverview Console-based soccer quiz game.
  */
 
+declare function prompt(message?: string): string | null;
+
 // VARIABLES
 let score: number = 0;
 let questionNumber: number = 0;
 let userAnswer: string = "";
-
-// FORCE ASSIGNMENT (required by strict linter)
-score = 0;
-questionNumber = 0;
-userAnswer = "";
 
 // ARRAYS
 const questions: string[] = [
@@ -52,25 +49,24 @@ const answers: string[][] = [
   ["throw-in", "throw in"],
 ];
 
-// TEMP USAGE
-console.log(score, questionNumber, userAnswer);
-console.log(questions[0], answers[0]);
-
+// MAIN QUIZ LOOP
 while (questionNumber < questions.length) {
   userAnswer = prompt(questions[questionNumber]) ?? "";
   userAnswer = userAnswer.toLowerCase().trim();
 
-  // Check if user answer matches any of the accepted answers
   if (answers[questionNumber].includes(userAnswer)) {
     console.log("Correct!\n");
     score = score + 1;
   } else {
     console.log(
       "Incorrect. The correct answer is " +
-        answers[questionNumber][0] +
-        "\n",
+      answers[questionNumber][0] +
+      "\n"
     );
   }
 
   questionNumber = questionNumber + 1;
 }
+
+console.log("Quiz complete!");
+console.log("Your final score is: " + score + " / " + questions.length);
