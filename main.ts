@@ -1,3 +1,8 @@
+/* eslint-disable no-console */
+
+declare function prompt(message?: string): string | null;
+declare function alert(message?: string): void;
+
 /**
  * @author Marko Skorupan
  * @version 1.0.0
@@ -95,3 +100,5 @@ do {
 
 console.log("Thanks for playing!");
 console.log("Done.");
+
+export {};
