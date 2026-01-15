@@ -1,7 +1,5 @@
 /* eslint-disable no-console */
-
-declare function prompt(message?: string): string | null;
-declare function alert(message?: string): void;
+/* eslint-disable no-undef */
 
 /**
  * @author Marko Skorupan
@@ -9,6 +7,8 @@ declare function alert(message?: string): void;
  * @date 2026-01-10
  * @fileoverview Console-based soccer quiz game.
  */
+
+declare function prompt(message?: string): string | null;
 
 // VARIABLES
 let score: number = 0;
@@ -61,17 +61,11 @@ console.log("2. Type your answer and press Enter.");
 console.log("3. Your score will be shown at the end of the quiz.");
 console.log("Good luck!\n");
 
-alert(
-  "Welcome to the Soccer Quiz!\n\nRead the rules in the console.\nClick OK to begin.",
-);
-
 // RESTART LOOP
 do {
-  // reset values
   score = 0;
   questionNumber = 0;
 
-  // MAIN QUIZ LOOP
   while (questionNumber < questions.length) {
     userAnswer = prompt(questions[questionNumber]) ?? "";
     userAnswer = userAnswer.toLowerCase().trim();
@@ -90,7 +84,6 @@ do {
     questionNumber = questionNumber + 1;
   }
 
-  // FINAL OUTPUT
   console.log("Quiz complete!");
   console.log("Your final score is: " + score + " / " + questions.length);
 
@@ -99,6 +92,6 @@ do {
 } while (playAgain === "yes");
 
 console.log("Thanks for playing!");
-console.log("Done.");
+console.log("\nDone.");
 
 export {};
