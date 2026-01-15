@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 /**
  * @author Marko Skorupan
  * @version 1.0.0
@@ -10,30 +8,90 @@
 // VARIABLES
 let score: number = 0;
 let questionNumber: number = 0;
+let userAnswer: string = "";
+let playAgain: string = "";
 
 // ARRAYS
 const questions: string[] = [
   "How many players are on the field for one team?",
   "What is it called when a player scores three goals in one game?",
   "Which country won the 2022 FIFA World Cup?",
+  "Who won the Ballon d'Or in 2023?",
+  "Which club has won the most UEFA Champions League titles?",
+  "What color card means a player is sent off?",
+  "Which country has won the most FIFA World Cups?",
+  "Who won the UEFA Euro 2020 tournament?",
+  "What is the name of the area where the goalkeeper is allowed to use their hands?",
+  "Which player is known as CR7?",
+  "What is awarded when a defender commits a foul inside their own penalty area?",
+  "Which country hosted the 2018 FIFA World Cup?",
+  "How long is a standard professional soccer match?",
+  "Which club is FC Barcelona's biggest rival?",
+  "What restarts play when the ball goes out over the sideline?",
 ];
 
 const answers: string[][] = [
-  ["11"],
+  ["11", "eleven"],
   ["hat-trick", "hat trick"],
   ["argentina"],
+  ["lionel messi", "messi"],
+  ["real madrid"],
+  ["red card", "red"],
+  ["brazil"],
+  ["italy"],
+  ["penalty area", "penalty box"],
+  ["cristiano ronaldo", "ronaldo", "cr7"],
+  ["penalty kick", "penalty shot"],
+  ["russia"],
+  ["90 minutes", "90"],
+  ["real madrid"],
+  ["throw-in", "throw in"],
 ];
 
-// MAIN PROGRAM
-while (questionNumber < questions.length) {
-  const userAnswer: string = answers[questionNumber][0];
+// WELCOME
+console.log("Welcome to the Soccer Quiz!");
+console.log("Rules:");
+console.log("1. You will be asked multiple soccer-related questions.");
+console.log("2. Type your answer and press Enter.");
+console.log("3. Your score will be shown at the end of the quiz.");
+console.log("Good luck!\n");
 
-  if (answers[questionNumber].includes(userAnswer)) {
-    score = score + 1;
+alert(
+  "Welcome to the Soccer Quiz!\n\nRead the rules in the console.\nClick OK to begin.",
+);
+
+// RESTART LOOP
+do {
+  // reset values
+  score = 0;
+  questionNumber = 0;
+
+  // MAIN QUIZ LOOP
+  while (questionNumber < questions.length) {
+    userAnswer = prompt(questions[questionNumber]) ?? "";
+    userAnswer = userAnswer.toLowerCase().trim();
+
+    if (answers[questionNumber].includes(userAnswer)) {
+      console.log("Correct!\n");
+      score = score + 1;
+    } else {
+      console.log(
+        "Incorrect. The correct answer is " +
+          answers[questionNumber][0] +
+          "\n",
+      );
+    }
+
+    questionNumber = questionNumber + 1;
   }
 
-  questionNumber = questionNumber + 1;
-}
+  // FINAL OUTPUT
+  console.log("Quiz complete!");
+  console.log("Your final score is: " + score + " / " + questions.length);
 
-console.log("Quiz complete");
-console.log("Final score:", score);
+  playAgain = prompt("Would you like to play again? (yes/no)") ?? "";
+  playAgain = playAgain.toLowerCase().trim();
+} while (playAgain === "yes");
+
+console.log("Thanks for playing!");
+console.log("Done.");
