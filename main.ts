@@ -1,6 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable no-undef */
-
 /**
  * @author Marko Skorupan
  * @version 1.0.0
